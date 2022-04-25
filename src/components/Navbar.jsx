@@ -5,9 +5,11 @@ import {useContext} from "react";
 export const Navbar = () => {
   const {Authst,toggleAuthSt}=useContext(AuthContext);
 
-
+  console.log("fuck")
   return (
+    
     <div className="navbar">
+      
       <Link className="nav-home" to="/">
         Home
       </Link>
@@ -18,13 +20,12 @@ export const Navbar = () => {
         Admin
       </Link>
       {/* Show Either logout or login based on auth context. DO NOT show both */}
-      {Authst ? <Link onclick ={()=>{
+      {Authst ? <Link onClick ={()=>{
         toggleAuthSt()
       }} className="nav-logout" to="/logout">
         Logout
       </Link>
       :
-
       <Link className="nav-login" to="/login">
         Login
       </Link>

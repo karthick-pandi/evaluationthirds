@@ -7,12 +7,13 @@ import { Admin } from "./components/Admin";
 import { Navbar } from "./components/Navbar";
 import { Logout } from "./components/Logout";
 import {Routes,Route} from "react-router-dom"
-function App() {
+
+ function App() {
+
   return (
     <div className="App">
-      <Navbar />
+       <Navbar />
       <Routes>
-      
       <Route path="/" element={<Home> </Home>}/>
       <Route path="/employees" element={<EmployeeList> </EmployeeList>}/>
       <Route path="/login" element={<Login></Login>}/>
