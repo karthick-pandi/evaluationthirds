@@ -1,11 +1,12 @@
 import {useContext,useState} from "react";
-import {AuthContext} from "./Authcontext";
+import {AuthContext} from "./AuthContext";
 import axios from "axios";
 import { useNavigate} from "react-router-dom"
 
 
 export const Login = () => {
   //  use reqres to log user in.
+  const navigate=useNavigate()
   const [userN,setUserN]=useState("");
   const [userP,SetUserP]=useState("");
   console.log(userN,userP);
@@ -16,7 +17,7 @@ export const Login = () => {
       email:userN,
       password:userP
   })
-    .then(function(rseponse){
+    .then(function(response){
       console.log(response.data);
       toggleAuthSt()
       navigate("/")
@@ -46,9 +47,9 @@ export const Login = () => {
         placeholder="Enter password"
         className="login_password"
         onChange={(e)=>{
-          setUserP(e.target.value)
+          SetUserP(e.target.value)
         }}onBlur={(e)=>{
-          setUserP(e.target.value)
+          SetUserP(e.target.value)
         }}
       />
       <input type="submit" value="SIGN IN" onClick={userLog} className="login_submit" />

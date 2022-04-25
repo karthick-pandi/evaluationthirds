@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
-import {AuthContext} from "./Authcontext";
+import {AuthContext} from "./AuthContext";
 import {useContext} from "react";
 
 export const Navbar = () => {
-  // const {Authst,toggleAuthSt}=useContext(AuthContext);
+  const {Authst,toggleAuthSt}=useContext(AuthContext);
 
 
   return (

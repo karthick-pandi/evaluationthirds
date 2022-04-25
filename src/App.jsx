@@ -3,7 +3,7 @@ import { Login } from "./components/Login";
 import { EmployeeList } from "./components/EmployeeList";
 import { EmployeeDetails } from "./components/EmployeeDetails";
 import { Admin } from "./components/Admin";
-import { ProtectedRoute } from "./components/PrivateRoute";
+// import { ProtectedRoute } from "./components/PrivateRoute";
 import { Navbar } from "./components/Navbar";
 import { Logout } from "./components/Logout";
 import {Routes,Route} from "react-router-dom"
@@ -16,8 +16,8 @@ function App() {
       <Route path="/" element={<Home> </Home>}/>
       <Route path="/employees" element={<EmployeeList> </EmployeeList>}/>
       <Route path="/login" element={<Login></Login>}/>
-      <Route path="/employees/:id" element={<ProtectedRoute><EmployeeDetails> </EmployeeDetails></ProtectedRoute>}/>
-      <Route path="/admin" element={<ProtectedRoute><Admin> </Admin></ProtectedRoute>}/>
+      <Route path="/employees/:id" element={<EmployeeDetails> </EmployeeDetails>}/>
+      <Route path="/admin" element={<Admin> </Admin>}/>
       <Route path="/logout" element={<Logout></Logout>}/>
       </Routes>
     </div>
